@@ -133,7 +133,7 @@ class Predictor(BasePredictor):
         # convert to numpy
         input_image = np.array(input_image)
 
-        if structure == 'lineart':
+        if structure == 'depth':
             outputs = process(
                 self.model,
                 self.ddim_sampler,
@@ -144,7 +144,7 @@ class Predictor(BasePredictor):
                 n_prompt,
                 num_samples,
                 image_resolution,
-                preprocessor_resolution,
+                preprocessor_resolution,S
                 ddim_steps,
                 guessmode,
                 strength,
