@@ -20,8 +20,8 @@ class Predictor(BasePredictor):
         # Load the state dictionary from Realistic_Vision_V2.0.ckpt
         state_dict = load_state_dict('./models/Realistic_Vision_V2.0.ckpt', location='cuda')
 
-        # LINEART
-        model_name = 'control_v11p_sd15_lineart'
+        # Depth
+        model_name = 'control_v11f1p_sd15_depth'
         self.model = create_model(f'./models/{model_name}.yaml').cuda()
         self.model.load_state_dict(state_dict, strict=False)
 
