@@ -88,8 +88,8 @@ class Predictor(BasePredictor):
                 ),
                 preprocessor: str= Input(
                     description="preprocessor, Normal bae just for Normal, Lineart and lineart coarse just for lineart, MLSD just for MLSD",
-                    default="Lineart", 
-                    choices=["Lineart", "Lineart_Coarse", "Normal_BAE","MLSD", "None"] 
+                    default="depth", 
+                    choices=["depth", "Lineart_Coarse", "Normal_BAE","MLSD", "None"] 
                 ),
                 preprocessor_resolution: int = Input(
                     description="Preprocessor resolution",
